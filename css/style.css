@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+:root {
+  --white: #f2f2f2;
+  --color-title: #7e68cc;
+  --black: #323240;
+  --button: #ebebf2;
+  --button-playerO: #f0ba8a;
+  --button-playerX: #f39984;
+  --playerX: #eb6ea8;
+  --playerO: #a778e9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Source Code Pro', monospace;
+}
+
+button {
+  background-color: var(--button);
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  width: 180px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.wrapper {
+  background-color: var(--white);
+  min-height: 100%;
+  display: grid;
+  text-align: center;
+  padding: 30px 150px;
+  grid-auto-rows: min-content;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--color-title);
+}
+
+/* ----- MENU ----- */
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.menu p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.options {
+  display: flex;
+  gap: 150px;
+}
+
+.current-move {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+/* ----- BOARD ----- */
+.board-container {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 230px;
+}
+
+.board-grid {
+  background-color: var(--black);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px,
+    rgb(0 0 0 / 20%) 0px -3px 0px inset;
+}
+
+.cell {
+  width: 125px;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.cell:hover {
+  box-shadow: rgb(204 219 232) 3px 3px 6px 0px inset,
+    rgb(255 255 255 / 50%) -3px -3px 6px 1px inset,
+    rgb(186 201 214) -3px -3px 5px 2px inset;
+}
+
+.cell:has(i):hover {
+  box-shadow: none;
+}
+
+.cell .fas {
+  font-size: 3em;
+}
+
+.cell .fa-times {
+  color: var(--playerX);
+}
+
+.cell .fa-circle-notch {
+  color: var(--playerO);
+}
+
+.score {
+  font-size: 3rem;
+  align-self: center;
+}

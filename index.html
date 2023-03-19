@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/b8200729a2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ODIN | Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header><h1>TIC TAC TOE</h1></header>
+
+      <div class="menu">
+        <section class="menu-section menu-section--player-X">
+          <p>Player X</p>
+          <div class="options">
+            <button>Human</button>
+            <button>AI</button>
+          </div>
+        </section>
+
+        <section class="current-move"></section>
+
+        <section class="difficulty menu-section menu-section--player-O">
+          <p>Player O</p>
+          <div class="options">
+            <button>Human</button>
+            <button>AI</button>
+          </div>
+        </section>
+      </div>
+      <div class="board-container">
+        <div class="score player-X">0</div>
+        <div class="board-grid">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="score player-O">0</div>
+      </div>
+      <div class="game-control">
+        <button id="new-game-btn">New Game</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+      <div class="game-result-msg"></div>
+    </div>
+  </body>
+</html>
